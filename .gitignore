@@ -12,6 +12,7 @@
 !/gradle.properties
 
 !/README.md
+!/BUILD.md
 
 !/buildSrc/
 
