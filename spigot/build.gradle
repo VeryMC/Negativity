@@ -31,7 +31,6 @@ configurations {
 
 dependencies {
     api project(':common')
-    implementation 'org.bstats:bstats-bukkit:1.7'
     compileOnly 'com.comphenix.protocol:ProtocolLib:4.5.0'
 
     spigot fileTree(dir: "spigotJars", includes: ['*.jar'])
@@ -55,21 +54,8 @@ shadowJar {
     archiveAppendix.set('spigot')
     archiveClassifier.set(null)
 
-    relocate('org.bstats', 'com.elikill58.negativity')
-
     mergeServiceFiles()
-    from(project(':common').tasks.shadowJar,
-            project('integrations:essentials').jar.outputs.files,
-            project('integrations:floodgate').jar.outputs.files,
-            project('integrations:floodgatev2').jar.outputs.files,
-            project('integrations:gadgetsmenu').jar.outputs.files,
-            project('integrations:maxbans').jar.outputs.files,
-            project('integrations:professionalbans').jar.outputs.files,
-            project('integrations:ultrapunishments').jar.outputs.files,
-            project('integrations:protocolsupport').jar.outputs.files,
-            project('integrations:worldguardv6').jar.outputs.files,
-            project('integrations:worldguardv7').jar.outputs.files
-    )
+    from(project(':common').tasks.shadowJar)
 }
 
 build.dependsOn shadowJar
@@ -80,13 +66,7 @@ parent.tasks.named('shadowJar', ShadowJar) {
 
 task prepareServer(type: Copy) {
     from shadowJar
-    rename { 'negativity.jar' }
-    def pluginDir = System.getProperty('plugins.dir')
-    if (pluginDir == null) {
-        enabled(false)
-    } else {
-        into pluginDir
-    }
+    enabled(false)
 }
 
 subprojects {
