@@ -1,8 +1,8 @@
 # Negativity
 
 Negativity est un AC développé par [Elikill58](https://github.com/Elikill58), ce plugin est disponible sur spigot.
-- [V1 (lien vers spigot)](https://www.spigotmc.org/resources/ac-negativity-spigot-1-7-1-19-sponge-bungeecord-velocity.48399){:target="_blank" rel="noopener"}
-- [V2 (lien vers spigot)](https://www.spigotmc.org/resources/negativity-v2-1-7-to-1-19-bungee-velocity-sponge-fabric.86874){:target="_blank" rel="noopener"} 
+- [V1 (lien vers spigot)](https://www.spigotmc.org/resources/ac-negativity-spigot-1-7-1-19-sponge-bungeecord-velocity.48399)
+- [V2 (lien vers spigot)](https://www.spigotmc.org/resources/negativity-v2-1-7-to-1-19-bungee-velocity-sponge-fabric.86874)
 
 Pour le contacter, voici son discord (`Elikill58#0743`) ou son [serveur discord](https://discord.gg/KHRVTX2).
 
