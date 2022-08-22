@@ -1,5 +1,3 @@
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-
 buildscript {
     repositories {
         maven {
@@ -18,6 +16,8 @@ plugins {
 }
 
 apply plugin: 'net.minecraftforge.gradle'
+
+evaluationDependsOn(':common')
 
 sourceSets {
     main {
@@ -83,11 +83,6 @@ afterEvaluate {
         dependsOn shadowJar
         input = shadowJar.archiveFile
     }
-}
-
-parent.tasks.named('shadowJar', ShadowJar) {
-    it.from(shadowJar.outputs)
-    it.manifest.inheritFrom(tasks.jar.manifest)
 }
 
 task prepareServer(type: Copy) {
